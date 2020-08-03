@@ -75,8 +75,8 @@ int main(int argc, char ** argv) {
 
         bzero(out_header, 0x100);
 
-        *(uint64_t*)out_header = 0x5244482d58334c42;
-        *(uint32_t*)&out_header[0x08] = 0x100;
+        *(uint64_t*)out_header = 0x5244482d58334c42; // "BL3X-HDR"
+        *(uint32_t*)&out_header[0x0c] = 0x100;
         if(0 == stat(opt_values.input, &stat_info)) {
             FILE *fin = fopen(opt_values.input, "rb");
             // trusted_payload_fname = $output.$rnd.tp

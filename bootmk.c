@@ -242,7 +242,7 @@ int main(int argc, char ** argv) {
                             fread(buffer, 1, 0x100, fin);
 
                             /* check if BL3X-HDR */
-                            if(0 == memcmp(buffer, "BL3X-HDR", 7) &&
+                            if(0 == memcmp(buffer, "BL3X-HDR", 8) &&
                                *(uint32_t*)&buffer[0xc] == 0x100  &&
                                *(uint32_t*)&buffer[0x30] == 0x12348765) {
                                 part_off = 0x158;
