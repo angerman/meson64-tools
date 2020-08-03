@@ -39,4 +39,5 @@ clean:
 	rm -f bl2sig bl30sig bl3sig bootmk
 
 install: bootmk bl2sig bl3sig bl30sig pkg
-	install -m 755 $^ $(PREFIX)
+	mkdir -p "$(PREFIX)"
+	install -m 755 $^ "$(PREFIX)"

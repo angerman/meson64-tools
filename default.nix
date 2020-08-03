@@ -12,6 +12,6 @@
             patchShebangs ./mbedtls/scripts/generate_psa_constants.py
         '';
 
-        makeFlags = [ "PREFIX=$(out)" ];
+        makeFlags = [ "PREFIX=$(out)/bin" ];
     };
 }
