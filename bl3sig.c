@@ -35,8 +35,8 @@ int main(int argc, char ** argv) {
     if(opt_values.input == NULL || stat(opt_values.input, &stat_info) != 0)
         exit(1);
 
-    char output_file_name[0x100];
     char trusted_payload_fname[0x100];
+    char output_file_name[0x100];
     bzero(output_file_name, 0x100);
 
     /* try to fixup the output filename if it's not provied */
@@ -201,7 +201,7 @@ int main(int argc, char ** argv) {
 
                 // if (withUserKey) ...
 
-                FILE *fout = fopen(output_file_name, "wb");
+                FILE *fout = fopen(opt_values.output, "wb");
                 if(fout != NULL) {
                     /* header_offset == 0, unless --input starts with 0x12348765 */
                     if(header_offset > 0)
@@ -213,7 +213,7 @@ int main(int argc, char ** argv) {
                     fclose(fout);
                 }
                 /* output_file_name = output_file_name + trusted_payload_fname */
-                file_append(trusted_payload_fname, output_file_name);
+                file_append(trusted_payload_fname, opt_values.output);
                 // if(withUserKey) ...
             }
         }
