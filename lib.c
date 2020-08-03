@@ -1,4 +1,5 @@
 #include "types.h"
+#include <string.h>
 
 int sha256n(size_t nbuf, uchar_t *buf[], size_t size[], uchar_t *digest_buf) {
     mbedtls_sha256_context ctx;

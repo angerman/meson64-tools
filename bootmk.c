@@ -311,7 +311,7 @@ int main(int argc, char ** argv) {
     }
 end:
     if(fout != NULL) fclose(fout);
-    for(uint64_t pos = 0; pos < 10; pos++)
+    for(uint64_t pos = 0; pos < 9; pos++)
         if(ddrfw_toc.entries[pos].outBufferPtr != NULL)
             free(ddrfw_toc.entries[pos].outBufferPtr);
 

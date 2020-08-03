@@ -16,19 +16,19 @@ $(LZ4)/.built:
 	$(CC) $(CFLAGS) $< -o $@
 
 bootmk: lib.o bootmk.o
-	$(CC) $(LDFLAGS) $^ -o $@
+	$(CC) $^ -o $@ $(LDFLAGS)
 
 bl2sig: lib.o bl2sig.o
-	$(CC) $(LDFLAGS) $^ -o $@
+	$(CC) $^ -o $@ $(LDFLAGS)
 
 bl3sig: lib.o bl3sig.o
-	$(CC) $(LDFLAGS) $^ -o $@
+	$(CC) $^ -o $@ $(LDFLAGS)
 
 bl30sig: lib.o bl30sig.o
-	$(CC) $(LDFLAGS) $^ -o $@
+	$(CC) $^ -o $@ $(LDFLAGS)
 
 pkg: lib.o pkg.o
-	$(CC) $(LDFLAGS) $^ -o $@
+	$(CC) $^ -o $@ $(LDFLAGS)
 
 .phony: all clean install
 all: bootmk bl2sig bl3sig bl30sig pkg
