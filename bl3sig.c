@@ -5,6 +5,8 @@
 // ./aml_encrypt_g12b --bl3sig  --input bl31.img              --output bl31.img.enc          --level v3 --type bl31
 // ./aml_encrypt_g12b --bl3sig  --input bl33.bin              --output bl33.bin.enc          --level v3 --type bl33 --compress lz4
 
+#include <string.h>
+
 #include "types.h"
 #include "lib.h"
 #include "lz4hc.h"
