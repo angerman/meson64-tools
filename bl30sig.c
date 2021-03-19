@@ -4,6 +4,8 @@
 // ./aml_encrypt_g12b --bl30sig --input bl30_new.bin \
 //                              --output bl30_new.bin.g12a.enc --level v3
 
+#include <string.h>
+
 #include "types.h"
 #include "lib.h"
 
