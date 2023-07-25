@@ -18,6 +18,9 @@
 //
 // ACS is probably Amlogic Configurable SPL
 //
+
+#include <string.h>
+
 #include "types.h"
 #include "lib.h"
 

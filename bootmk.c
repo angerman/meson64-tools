@@ -18,6 +18,8 @@
 //                    --ddrfw7 diag_lpddr4.fw \
 //                    --ddrfw8 aml_ddr.fw
 
+#include <string.h>
+
 #include "types.h"
 #include "lib.h"
 

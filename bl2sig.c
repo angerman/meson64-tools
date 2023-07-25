@@ -4,6 +4,8 @@
 // ./aml_encrypt_g12b --bl2sig --input bl2_new.bin \
 //                             --output bl2.n.bin.sig
 
+#include <string.h>
+
 #include "types.h"
 #include "lib.h"
 
